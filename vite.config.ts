@@ -10,4 +10,16 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  server: {
+    proxy: {
+      "/api/jsonplaceholder": {
+        target: "http://jsonplaceholder.typicode.com",
+        changeOrigin: true,
+      },
+      "/api/themoviedb": {
+        target: "https://api.themoviedb.org/3",
+        changeOrigin: true,
+      },
+    },
+  },
 });
