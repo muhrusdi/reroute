@@ -1,15 +1,6 @@
-import {
-  Await,
-  Form,
-  useActionData,
-  useFetcher,
-  useNavigation,
-  useOutlet,
-  useOutletContext,
-} from "react-router";
-import { Route, RouteModule } from "./+types.form";
+import { Await, Form, useActionData, useNavigation } from "react-router";
+import { Route } from "./+types.form";
 import { z } from "zod";
-import { Post } from "./blogs";
 import { Suspense, useRef } from "react";
 import prisma from "~/lib/utils/prisma.server";
 import { createQuote } from "../../prisma/utils";
@@ -53,8 +44,6 @@ const FormPage = ({ loaderData }: Route.ComponentProps) => {
   const actionData = useActionData<typeof action>();
 
   const busy = navigation.state === "submitting";
-  const loading =
-    navigation.state === "idle" && actionData?.status === "success";
 
   if (navigation.state === "idle" && actionData?.status === "success") {
     formRef.current?.reset();
@@ -64,7 +53,6 @@ const FormPage = ({ loaderData }: Route.ComponentProps) => {
     <div>
       <div className="flex">
         <div className="w-1/2 border">
-          {loading ? "Loading..." : null}
           <Suspense fallback="Loading...">
             <ul>
               <Await resolve={data}>

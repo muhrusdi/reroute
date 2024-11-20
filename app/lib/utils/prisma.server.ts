@@ -1,4 +1,4 @@
-import { PrismaClient } from "../../../prisma/generated";
+import { PrismaClient } from "@prisma/client";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { SERVER_ENV } from "~/lib/env/env-flags.server";
 
