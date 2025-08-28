@@ -9,21 +9,21 @@
     "typecheck": "react-router typegen && tsc --build --noEmit"
   },
   "dependencies": {
-    "@react-router/node": "^7.7.1",
-    "@react-router/serve": "^7.7.1",
+    "@react-router/node": "^7.8.2",
+    "@react-router/serve": "^7.8.2",
     "axios": "^1.11.0",
     "isbot": "^5.1.28",
     "lucide-react": "^0.525.0",
     "motion": "^12.23.9",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-hook-form": "^7.61.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.62.0",
     "react-query": "^3.39.3",
-    "react-router": "^7.7.1",
-    "zod": "^4.0.10"
+    "react-router": "^7.8.2",
+    "zod": "^4.1.4"
   },
   "devDependencies": {
-    "@react-router/dev": "^7.7.1",
+    "@react-router/dev": "^7.8.2",
     "@tailwindcss/vite": "^4.1.11",
     "@types/node": "^24.1.0",
     "@types/react": "^19.1.8",
