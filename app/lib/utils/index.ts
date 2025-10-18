@@ -1,4 +1,5 @@
-import { RecordType } from "../types";
+import type { ZodNumberCheck } from "zod/v3";
+import { type RecordType } from "../types";
 
 export const generateQueries = (query?: RecordType) => {
   const obj = new URLSearchParams(query);
@@ -19,4 +20,8 @@ export const generateParams = (params?: Array<string | number>) => {
   }
 
   return paramsString;
+};
+
+export const wait = (time = 2000) => {
+  return new Promise((r) => setTimeout(r, time));
 };

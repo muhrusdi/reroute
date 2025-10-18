@@ -1,6 +1,6 @@
 import { APIs } from "./endpoints";
 import { axios } from "./axios";
-import { AxiosHeaders, AxiosRequestConfig } from "axios";
+import { AxiosHeaders, type AxiosRequestConfig } from "axios";
 import { generateParams, generateQueries } from "../utils";
 
 type Options = {

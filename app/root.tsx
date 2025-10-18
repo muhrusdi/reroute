@@ -10,6 +10,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import { QueryClientProvider } from "react-query";
 import { queryClient } from "./lib/api/query.client";
+import Nav from "./components/nav/nav";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -35,6 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <QueryClientProvider client={queryClient}>
+          <Nav />
           {children}
         </QueryClientProvider>
         <ScrollRestoration />
